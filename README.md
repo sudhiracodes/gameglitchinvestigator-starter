@@ -25,13 +25,41 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ A number-guessing game where players try to find a randomly generated secret number within a limited amount of attempts and range based on difficulty level to maximize their score.] 
+- [Bugs we found: 
+
+- The "New Game" button failed to clean the board and restart the game.
+
+- The "Show hint" toggle did nothing.
+
+- Out-of-range guesses were accepted without any warning or restriction.
+
+- Easy mode was mapped incorrectly, giving fewer attempts than Normal mode.
+
+- The Easy mode UI prompt incorrectly told users to guess between 1 and 100 instead of 1 and 20.
+
+- Normal and Hard mode ranges were flipped (Normal was 1-100; Hard was 1-50).
+
+- The winning score update was delayed and didn't display immediately upon guessing correctly. ] 
+
+- [
+- Fixed `get_range_for_difficulty` and `attempt_limit_map` so difficulty scaling makes sense.
+
+- Programmed the "New Game" button to clear `st.session_state` and trigger `st.rerun()`.
+
+- Added input validation to block out-of-bounds guesses and trigger a warning.
+
+- Wired the hint toggle to properly display the "Too High/Too Low" messages.
+
+- Adjusted the logic flow so the score calculates and updates immediately on a win.
+
+- Stored the secret number in `st.session_state` so it doesn't regenerate on every button click.] 
 
 ## 📸 Demo
+![alt text](<Screenshot 2026-03-15 at 11.06.00 PM.png>)
+![alt text](<Screenshot 2026-03-15 at 11.06.45 PM.png>)
+![alt text](<Screenshot 2026-03-15 at 11.04.30 PM.png>)
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
 
 ## 🚀 Stretch Features
 
