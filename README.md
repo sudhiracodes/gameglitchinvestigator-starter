@@ -25,8 +25,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ A number-guessing game where players try to find a randomly generated secret number within a limited amount of attempts and range based on difficulty level to maximize their score.] 
-- [Bugs we found: 
+- Game's purpose:
+
+A number-guessing game where players try to find a randomly generated secret number within a limited amount of attempts and range based on difficulty level to maximize their score.
+
+- Bugs we found: 
 
 - The "New Game" button failed to clean the board and restart the game.
 
@@ -40,9 +43,10 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - Normal and Hard mode ranges were flipped (Normal was 1-100; Hard was 1-50).
 
-- The winning score update was delayed and didn't display immediately upon guessing correctly. ] 
+- The winning score update was delayed and didn't display immediately upon guessing correctly.
 
-- [
+- Fixes applied:
+
 - Fixed `get_range_for_difficulty` and `attempt_limit_map` so difficulty scaling makes sense.
 
 - Programmed the "New Game" button to clear `st.session_state` and trigger `st.rerun()`.
@@ -53,7 +57,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - Adjusted the logic flow so the score calculates and updates immediately on a win.
 
-- Stored the secret number in `st.session_state` so it doesn't regenerate on every button click.] 
+- Stored the secret number in `st.session_state` so it doesn't regenerate on every button click.
 
 ## 📸 Demo
 ![alt text](<Screenshot 2026-03-15 at 11.06.00 PM.png>)
